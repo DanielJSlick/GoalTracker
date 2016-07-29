@@ -38,7 +38,7 @@ urlpatterns = [
             'next_page': '/',
         },
         name='logout'),
-    url(r'^app/', include('goalie.urls')),
+    url(r'^goalie/', include('goalie.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
     # Uncomment the admin/doc line below to enable admin documentation:
