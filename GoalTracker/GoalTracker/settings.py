@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'goalie',
+    'goalie.apps.GoalieConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

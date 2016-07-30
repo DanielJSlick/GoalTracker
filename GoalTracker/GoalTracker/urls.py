@@ -7,8 +7,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 import django.contrib.auth.views
 
-import app.forms
-import app.views
+import goalie.forms
+import goalie.views
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -17,14 +17,14 @@ import app.views
 
 urlpatterns = [
     # Examples:
-    url(r'^$', app.views.home, name='home'),
-    url(r'^contact$', app.views.contact, name='contact'),
-    url(r'^about', app.views.about, name='about'),
+    url(r'^$', goalie.views.home, name='home'),
+    url(r'^contact$', goalie.views.contact, name='contact'),
+    url(r'^about', goalie.views.about, name='about'),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
-            'template_name': 'app/login.html',
-            'authentication_form': app.forms.BootstrapAuthenticationForm,
+            'template_name': 'goalie/login.html',
+            'authentication_form': goalie.forms.BootstrapAuthenticationForm,
             'extra_context':
             {
                 'title': 'Log in',
